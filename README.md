@@ -8,8 +8,8 @@ This tools will help you to Encrypt and Decrypt Text in Caesar Algorithm with Br
 ## Requirement
 ---
 - Python(3):
-         - Rich
-         - Ascii-Magic
+    - Rich
+    - Ascii-Magic
 
 ## Installation
 ---

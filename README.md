@@ -10,7 +10,6 @@ This tools will help you to Encrypt and Decrypt Text in Caesar Algorithm with Br
     - Ascii-Magic
 
 ## Installation
----
 
 ### - Linux
 Instructions on how to install toolsCaesar.

@@ -24,11 +24,14 @@ python3 caesar.py
 ```
 
 ## Tools Overview
-Created by Budimu Jaya 
 
 | Front View | Sample Feature	|
 | ------------  | ------------ |
 |![index](https://github.com/putr444/toolsCaesar/blob/main/pict/toolsOverview.jpg?raw=true)|![f](https://github.com/putr444/toolsCaesar/blob/main/pict/result.jpg?raw=true)
 
+## Credit & Thanks
+- [GeeksforGeeks](https://www.geeksforgeeks.org/caesar-cipher-in-cryptography/) - Reference Source
+
 ## Enjoy ☕ 
+Created by **Budimu Jaya**
 

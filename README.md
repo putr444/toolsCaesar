@@ -1,12 +1,10 @@
 # toolsCaesar w/ Brute Force Approach
----
 
 This tools will help you to Encrypt and Decrypt Text in Caesar Algorithm with Brute Force Approach. 
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 ## Requirement
----
 - Python(3):
     - Rich
     - Ascii-Magic
@@ -27,7 +25,6 @@ python3 caesar.py
 ```
 
 ## Tools Overview
----
 
 | Front View | Sample Feature	|
 | ------------  | ------------ |

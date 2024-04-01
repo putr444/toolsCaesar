@@ -1,4 +1,4 @@
-# toolsCaesar w/ Brute Force Approach
+# toolsCaesar 
 
 This tools will help you to Encrypt and Decrypt Text in Caesar Algorithm with Brute Force Approach. 
 
@@ -25,9 +25,9 @@ python3 caesar.py
 
 ## Tools Overview
 
-| Front View | Sample Feature	|
-| ------------  | ------------ |
-|![index](https://github.com/putr444/toolsCaesar/blob/main/pict/toolsOverview.jpg?raw=true)|![f](https://github.com/putr444/toolsCaesar/blob/main/pict/result.jpg?raw=true)
+| Front View | Encrypt	| Decrypt |
+| ------------  | ------------ | ------------ |
+|![index](https://github.com/putr444/toolsCaesar/blob/main/pict/toolsOverview.jpg?raw=true)|![f](https://github.com/putr444/toolsCaesar/blob/main/pict/result.jpg?raw=true)|[f](https://github.com/putr444/toolsCaesar/blob/main/pict/decrypt.jpg?raw=true)
 
 ## Credit & Thanks
 - [GeeksforGeeks](https://www.geeksforgeeks.org/caesar-cipher-in-cryptography/) - Reference Source

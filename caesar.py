@@ -16,11 +16,13 @@ def menu():
           " [[red]2[/red]] Decrypt Cipher Text\n"
           " [[red]3[/red]] Exit\n"
           "\n")
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
-ascii_art()
-menu()
 while True:
+    ascii_art()
+    menu()
     while True:
         try:
             choice = int((input(" Select one of the options > ")))
@@ -33,6 +35,8 @@ while True:
             print(" [[red]![/red]] Choose In range 1-3")
 
     if choice == 1:
+        clear_screen()
+        ascii_art()
         plainText = str(input(" Encrypt > ")).upper()
         letter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         
@@ -50,10 +54,16 @@ while True:
                 else:
                     encrypt += symbol
             print(f" [[red]+[/red]] Key [{key}]: {encrypt}")
+            result_e = encrypt
             time.sleep(0.2)
-        print(" [[red]+[/red]] Finished !")
+        print(f" [[red]+[/red]] Finished ! your encrypted : {result_e}")
+        input("Press Enter to continue...")
+        clear_screen()
+        continue
                   
     elif choice == 2:
+        clear_screen()
+        ascii_art()
         cipherText = str(input(" Decrypt > ")).upper()
         letter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
@@ -71,9 +81,12 @@ while True:
                 else:
                     translated += symbol
             print(f" [[red]+[/red]] Key [{key}]: {translated}")
+            result_d = translated
             time.sleep(0.2)
-        print(" [[red]+[/red]] Finished !")
-
+        print(f" [[red]+[/red]] Finished ! your decrypted : {result_d}")
+        input("Press Enter to continue...")
+        clear_screen()
+        continue
     elif choice == 3:
         print(" [[red]+[/red]] Thanks For Using !!")
         break

@@ -1,3 +1,4 @@
+import sys, subprocess
 import time
 from rich.progress import track
 from rich import print
@@ -17,9 +18,12 @@ def menu():
           " [[red]3[/red]] Exit\n"
           "\n")
 def clear_screen():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-
+    operatingSystem = sys.platform
+    if operatingSystem == "win32":
+        subprocess.run("cls", shell=True)
+    elif operatingSystem == "linux" or operatingSystem == "darwin":
+        subprocess.run("clear", shell=True)
+        
 while True:
     ascii_art()
     menu()

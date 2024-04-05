@@ -53,10 +53,9 @@ while True:
                     encrypt += letter[num]
                 else:
                     encrypt += symbol
-            print(f" [[red]+[/red]] Key [{key}]: {encrypt}")
-            result_e = encrypt
+            print(f" [[red]+[/red]] Key [{key}] : {encrypt}")
             time.sleep(0.2)
-        print(f" [[red]+[/red]] Finished ! your encrypted : {result_e}")
+        print(f" [[red]+[/red]] Finished !")
         input("Press Enter to continue...")
         clear_screen()
         continue
@@ -81,9 +80,8 @@ while True:
                 else:
                     translated += symbol
             print(f" [[red]+[/red]] Key [{key}]: {translated}")
-            result_d = translated
             time.sleep(0.2)
-        print(f" [[red]+[/red]] Finished ! your decrypted : {result_d}")
+        print(f" [[red]+[/red]] Finished !")
         input("Press Enter to continue...")
         clear_screen()
         continue

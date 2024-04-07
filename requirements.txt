@@ -1,2 +1,0 @@
-ascii_magic==2.3.0
-rich==13.7.1

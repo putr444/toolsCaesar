@@ -1,4 +1,4 @@
-import time, sys, os
+import time, os
 
 # color snippet
 red = "\033[31m"
@@ -24,7 +24,6 @@ ascii = (f"""
 \__/ \____/ \____//_//____/   \___/ \__,_/ \___//____/ \__,_//_/{white}
                                     
                                   {cyan}[{white} Created by {red}putr444 {cyan}]{white}
-                                                                     
 """)
 
 def clear_screen():
@@ -55,23 +54,34 @@ while True:
         except Exception:
             print(f" {warning} Choose In range 1-3")
 
-    if choice == 1:
+    if choice == 1: # ENCRYPT TEXT
         clear_screen()
         ascii_art()
-        plainText = str(input(f" {ask} Encrypt > ")).upper()
-        letter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        plainText = str(input(f" {ask} Encrypt > "))
+        letterUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        letterLower = 'abcdefghijklmnopqrstuvwxyz'
         
-        for key in range(1, len(letter)):
+        for key in range(1, 26):
             encrypt = ''
             for symbol in plainText:
-                if symbol in letter:
-                    num = letter.find(symbol)
+                if symbol in letterUpper:
+                    num = letterUpper.find(symbol)
                     num += key
 
-                    if num >= len(letter):
-                        num -= len(letter)
+                    if num >= len(letterUpper):
+                        num -= len(letterUpper)
             
-                    encrypt += letter[num]
+                    encrypt += letterUpper[num]
+
+                elif symbol in letterLower:
+                    num = letterLower.find(symbol)
+                    num += key
+
+                    if num >= len(letterLower):
+                        num -= len(letterLower)
+                    
+                    encrypt += letterLower[num]
+                
                 else:
                     encrypt += symbol
             print(f" {success} Key [{cyan}{key}{white}] : {encrypt}")
@@ -81,31 +91,42 @@ while True:
         clear_screen()
         continue
                   
-    elif choice == 2:
+    elif choice == 2: # DECRYPT TEXT
         clear_screen()
         ascii_art()
-        cipherText = str(input(f" {ask} Decrypt > ")).upper()
-        letter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        cipherText = str(input(f" {ask} Decrypt > "))
+        letterUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        letterLower = 'abcdefghijklmnopqrstuvwxyz'
 
-        for key in range(1, len(letter)):
-            translated = ''
+        for key in range(1, 26):
+            decrypt = ''
             for symbol in cipherText:
-                if symbol in letter:
-                    num = letter.find(symbol)
+                if symbol in letterUpper:
+                    num = letterUpper.find(symbol)
                     num -= key
 
                     if num < 0:
-                        num += len(letter)
+                        num += len(letterUpper)
 
-                    translated += letter[num]
+                    decrypt += letterUpper[num]
+                
+                elif symbol in letterLower:
+                    num = letterLower.find(symbol)
+                    num -= key
+
+                    if num < 0:
+                        num += len(letterLower)
+                    
+                    decrypt += letterLower[num]
+
                 else:
-                    translated += symbol
-            print(f" {success} Key [{cyan}{key}{white}]: {translated}")
+                    decrypt += symbol
+            print(f" {success} Key [{cyan}{key}{white}]: {decrypt}")
             time.sleep(0.2)
         print(f" {success} Finished !")
         input("\n Press Enter to continue...")
         clear_screen()
         continue
     
-    elif choice == 3:
+    elif choice == 3: # EXIT PROGRAM
         break
